@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My AltSchool Profile</title>
+  <title>AltSchool Application Form</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -38,14 +38,36 @@
       padding: 10px 0;
       margin-top: 20px;
     }
-    .scroll-top {
-      display: block;
-      margin-top: 20px;
-      text-align: center;
+    form {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f9f9f9;
     }
-    .scroll-top a {
-      text-decoration: none;
-      color: #333;
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      padding: 10px 20px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #555;
     }
   </style>
 </head>
@@ -56,28 +78,41 @@
   </nav>
 
   <div class="container">
-    <h1>Welcome to My AltSchool Profile</h1>
-    <h2>Basic Information</h2>
-    <p><strong>Name:</strong> Onwusilike Godswill Chimnonso<p>
-    <p><strong>AltSchool ID:</strong> ALT/SOE/024/2671</p>
+    <h1>AltSchool Application Form</h1>
+    <form action="#" method="post">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" name="first-name" required>
 
-    <h2>Biography</h2>
-    <p>I am a software engineering student passionate about technology and innovation. I have experience working on various projects involving web and software development. My goal is to become a highly skilled cloud engineer.</p>
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" name="last-name" required>
 
-    <h2>Why I Joined AltSchool</h2>
-    <p>I joined AltSchool to enhance my technical skills and gain practical experience in solving real-world problems. The hands-on approach to learning at AltSchool aligns perfectly with my aspirations.</p>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
 
-    <h2>Goals for the School of Engineering Program</h2>
-    <p>My goals include mastering modern programming languages, contributing to open-source projects, and building scalable and impactful software solutions.</p>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
 
-    <div class="scroll-top">
-      <a href="#top">Scroll to Top</a>
-    </div>
+      <label for="program">Program of Interest</label>
+      <select id="program" name="program" required>
+        <option value="">Select a program</option>
+        <option value="frontend">Frontend Development</option>
+        <option value="backend">Backend Development</option>
+        <option value="cloud">Cloud Engineering</option>
+      </select>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" name="confirm-password" required>
+
+      <button type="submit">Submit Application</button>
+    </form>
   </div>
 
   <footer>
     <p>123 Main Street, Lagos, Nigeria</p>
-    <p>&copy; 2025 Godswill Chimnonso. All rights reserved.</p>
+    <p>&copy; 2025 AltSchool Africa. All rights reserved.</p>
   </footer>
 </body>
 </html>
