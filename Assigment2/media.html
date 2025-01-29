@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: white;
+      width: 100%;
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 90%;
+      margin: 20px auto;
+    }
+
+    .media-section {
+      margin-bottom: 20px;
+    }
+
+    picture {
+      display: block;
+      margin: 0 auto 10px;
+      max-width: 100%;
+    }
+
+    video {
+      width: 100%;
+      max-width: 700px;
+      margin: 20px auto;
+      display: block;
+    }
+
+    audio {
+      margin: 10px auto;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      background: #333;
+      color: white;
+      padding: 10px 0;
+      width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Me</h1>
+    <p>Welcome to my personal media-rich page!</p>
+  </header>
+
+  <div class="container">
+    <!-- Responsive Picture Section -->
+    <section class="media-section">
+      <h2>Responsive Picture</h2>
+      <picture>
+        <source srcset="laptop.jpg" media="(min-width: 1024px)">
+        <source srcset="tablet.jpg" media="(min-width: 768px)">
+        <source srcset="mobile.jpg" media="(max-width: 767px)">
+        <img src="default.jpg" alt="A picture about me" style="width: 100%; height: auto;">
+      </picture>
+      <p>This responsive picture adapts to different devices: laptop, tablet, and mobile.</p>
+    </section>
+
+    <!-- Video Section -->
+    <section class="media-section">
+      <h2>Introduction Video</h2>
+      <video controls>
+        <source src="intro.mp4" type="video/mp4">
+        <source src="intro.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+      <p>Watch this short video to learn more about my journey and achievements.</p>
+    </section>
+
+    <!-- Audio Section -->
+    <section class="media-section">
+      <h2>Audio Message</h2>
+      <audio controls>
+        <source src="message.mp3" type="audio/mpeg">
+        <source src="message.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+      </audio>
+      <p>Listen to this audio message where I share my vision and goals.</p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 My Personal Page | All Rights Reserved
+  </footer>
+</body>
+</html>
