@@ -17,24 +17,25 @@
       line-height: 1.6;
     }
 
-    header {
+    nav {
       text-align: center;
-      padding: 20px;
+      padding: 5px;
       background: #333;
       color: white;
       width: 100%;
     }
-
-    .container {
-      max-width: 1200px;
-      width: 90%;
-      margin: 20px auto;
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
     }
-
     .media-section {
       margin-bottom: 20px;
+      padding: 20px;
     }
-
+    .media-section3 {
+      margin-top: 20px;
+    }
     picture {
       display: block;
       margin: 0 auto 10px;
@@ -64,29 +65,30 @@
   </style>
 </head>
 <body>
-  <header>
+  <nav>
     <h1>About Me</h1>
     <p>Welcome to my personal media-rich page!</p>
-  </header>
+    <a href="table.html"> Go to table page</a>
+  </nav>
 
-  <div class="container">
+  <!--div class="container"-->
     <!-- Responsive Picture Section -->
     <section class="media-section">
       <h2>Responsive Picture</h2>
       <picture>
-        <source srcset="laptop.jpg" media="(min-width: 1024px)">
-        <source srcset="tablet.jpg" media="(min-width: 768px)">
-        <source srcset="mobile.jpg" media="(max-width: 767px)">
+        <source srcset="assets/laptop.jpeg" media="(min-width: 1024px)">
+        <source srcset="assets/tablet.jpeg" media="(min-width: 768px)">
+        <source srcset="assets/mobile.jpeg" media="(max-width: 767px)">
         <img src="default.jpg" alt="A picture about me" style="width: 100%; height: auto;">
       </picture>
       <p>This responsive picture adapts to different devices: laptop, tablet, and mobile.</p>
     </section>
 
     <!-- Video Section -->
-    <section class="media-section">
+    <section class="media-section2">
       <h2>Introduction Video</h2>
       <video controls>
-        <source src="intro.mp4" type="video/mp4">
+        <source src="assets/assignment_video.mp4" type="video/mp4">
         <source src="intro.webm" type="video/webm">
         Your browser does not support the video tag.
       </video>
@@ -94,16 +96,16 @@
     </section>
 
     <!-- Audio Section -->
-    <section class="media-section">
+    <section class="media-section3">
       <h2>Audio Message</h2>
       <audio controls>
-        <source src="message.mp3" type="audio/mpeg">
+        <source src="assets/short-10-228139.mp3" type="audio/mpeg">
         <source src="message.ogg" type="audio/ogg">
         Your browser does not support the audio element.
       </audio>
       <p>Listen to this audio message where I share my vision and goals.</p>
     </section>
-  </div>
+
 
   <footer>
     &copy; 2025 My Personal Page | All Rights Reserved

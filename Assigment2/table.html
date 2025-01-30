@@ -11,22 +11,35 @@
         padding: 0;
         line-height: 1.6;
       }
+      nav {
+        background: #333;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2em;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+      }
       .container {
-        padding: 100px;
+        padding: 200px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: -100px;
       }
       table {
         width: 100%;
         border-collapse: collapse;
-        margin: 20px 0;
-        padding: 0;
+        margin: 20px;
       }
       table th,
       table td {
         border: 1px solid #ddd;
-        padding: 8px;
+        padding: 16px;
         text-align: center;
       }
       table th {
@@ -37,11 +50,15 @@
         color: white;
         text-align: center;
         padding: 8px 0;
-        margin-top: 300px;
+        margin-top: -10px;
       }
     </style>
   </head>
   <body>
+    <nav>
+      <a href="table.html">Home</a>
+      <a href="media.html">Media</a>
+    </nav>
     <div class="container">
       <h1 style="text-align: center;">AltSchool Africa Schools and Courses</h1>
       <table>
