@@ -1,67 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novus Watch Assignment</title>
-    <style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Huckleberry</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
         body {
             font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
             margin: 0;
-        }
-
-        .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            /* Set a fixed width based on your image size */
-            width: 400px; /* Adjust this value to match your image width */
-        }
-
-        .watch-image {
-            max-width: 100%; /* Image will fit the container */
-            display: block; /* Prevents a small space below the image */
-            margin-bottom: 20px;
-        }
-
-        .new-improved {
-            background-color: #ffdd59;
-            color: black;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 14px;
-            margin-bottom: 10px;
-            display: inline-block;
-        }
-
-        .watch-title {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .watch-description {
-            font-size: 14px;
+            padding: 0;
             line-height: 1.6;
+            background-color: black;
         }
-    </style>
+      
+      .container {
+        display: grid;
+        margin: 0;
+        padding: 0;;
+        
+      }
+      
+      .top-grid-item, .bottom-grid-item {
+        width: 600px;
+        height: 400px;
+        background-color: white;
+        margin: auto;
+      }
+      
+      .bottom-grid-item {
+        background-color: #666666;
+        position: relative;;
+      }
+      
+      .top-grid-item {
+        border-bottom: 8px solid #999999;
+      }
+      
+      #header {
+        font-family: 'Lato';
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 38.4px;
+        text-align: left;
+        margin: 100px 30px 40px;
+        background-color: #ffffff;
+      }
+      
+      .top-paragraph-1, .top-paragraph-2 {
+        font-family: 'Lato';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -0.005em;
+        margin: 30px 0px 30px 30px;
+        text-align: left;
+        width: 342px;
+        height: 60px;
+      }
+      
+      span { 
+        font-family: Lato;
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 30px;
+        letter-spacing: -0.005em;
+        text-align: left;
+        color: #119f70;
+        border: 0;
+      }
+      
+      
+      #banner {
+        background-color: #FFBF00;
+        width: 374px;
+        height: 10%;
+        padding: 15px 0 30px;
+        position: absolute;
+        top: 80px;
+        border-bottom: 8px solid #CC9900;
+        font-family: 'Lato';
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 28.8px;
+      }
+      
+      .banner-paragraph {
+        margin: 0;
+        margin-left: 30px;
+        width: 318px;
+      }
+      
+      #text-box {
+        background-color: #ffffff;
+        margin-top: 70px;
+        padding-top: 100px;
+        height: 100vh;
+        font-family: 'Lato';
+        font-size: 20px;
+        font-weight: 500;
+      }
+      
+      .txt-paragraph {
+        margin: 25px 0 0px 30px;
+        padding-right: 20px;
+        line-height: 30px;
+      }
+      
+      
+      @media screen and (max-width: 768px) {
+        .top-paragraph-1, .top-paragraph-2 {
+          width: 450px;
+          height: 60px; 
+          padding-right: 0;
+          margin-right: 0;  
+        }
+      
+        .top-paragraph-2 {
+          width: 342px; 
+        }
+      
+      
+        #banner {
+          width: 52%;
+          padding-bottom: 0.5rem;
+        }
+      
+        .banner-paragraph {
+          width: 95%;
+        }
+      
+        .txt-paragraph {
+          margin: 0 0 0 30px;
+          padding-right: 20px;
+          line-height: 30px;
+        }
+      }
+      
+      /* Media query for desktops (min-width: 1024px) */
+      @media screen and (min-width: 1024px) {
+        body {
+          font-size: 20px; /* Larger font size for desktops */
+        }
+      
+        .container {
+          width: 80%; /* Restrict the container width on desktop */
+          margin: 0 auto; /* Center the container */
+        }
+      }
+    
+  </style>
 </head>
-<body>
-
-    <div class="container">
-        <img class="watch-image" src="watch_image.jpg" alt="Novus Watch">
-        <div class="new-improved">New and Improved!</div>
-        <div class="watch-title">Novus Watch Series TV</div>
-        <div class="watch-description">
-            The pinnacle of fashion and tech. This wearable timepiece is an homage to gilded palaces and minimal regalia, combining waveon-deco and brutalism influences in a compact, Swiss made watch.
-        </div>
+<body class="container">
+  <div class="top-grid-item">
+    <p id="header">Huckleberry</p>
+    <p class="top-paragraph-1">An avante-garde agency focused on connecting <span>passion</span> with <span>logistics.</span></p>
+    <p class="top-paragraph-2">A better way to solve problems of <span>tomorrow.</span></p>
+  </div>
+  <div class="bottom-grid-item">
+    <div id="banner">
+      <p class="banner-paragraph">Wealth comes from operations</p>
+    </div> 
+    <div id="text-box">
+      <p class="txt-paragraph">
+        No modern business can thrive without developing a specialization in operations. Huckleberry has helped dozens of companies, 
+        from Fortune 50 monoliths to fast-growing Bay Area startups, achieve their goals and meet their KPIs by leveraging our extensive network of logistics experts.
+      </p>
+      <p class="txt-paragraph"> 
+        Huckleberry was established in 2003 to help ambitious businesses discover their true potential. If that resonates, let's chat!
+      </p>
     </div>
-
+  </div>
 </body>
 </html>
