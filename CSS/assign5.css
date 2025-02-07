@@ -37,9 +37,9 @@ body {
 }
 
 .logo img {
-    width: 32px;
-    height: 32px;
-    margin-right: 8px;
+    width: 120px;
+    height: 80px;
+    object-fit: contain;
 }
 
 .nav {
