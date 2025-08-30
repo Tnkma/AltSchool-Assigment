@@ -9,7 +9,7 @@ This repository contains the solutions for **Task 1** and **Task 2** of the AltS
 ### What I Did
 
 - **Created three S3 buckets** and enabled **static website hosting**.  
-- ***Cloudlaunch-site-bucket***  
+- ***Cloudlaunch-site-bucket-tnkma***  
 - Uploaded HTML/CSS files to serve as the website content.  
 - Configured an **IAM user** (`cloudlaunch-user`) with a **custom JSON policy** that allows:  
   - S3 access for uploading and managing site content.  
@@ -18,11 +18,11 @@ This repository contains the solutions for **Task 1** and **Task 2** of the AltS
   - Set up a CloudFront distribution in front of the bucket for HTTPS and global caching.  
 - Restricted the bucket so it is only accessible via CloudFront.  
 
-- ***Cloudlauch-private-bucket***
+- ***Cloudlauch-private-bucket-tnkma***
 - Turned off public access from outside.
 - Created a designated IAM user that have permissions only to GetObject and PutObject only (no Delete).
 
-- ***Cloudlaunch-visible-only-bucket***
+- ***Cloudlaunch-visible-only-bucket-tnkma***
 - Not publicly accessible also.
 - The IAM user was able to list this bucket (see it in S3 list) but not access its contents
 
@@ -36,8 +36,8 @@ This repository contains the solutions for **Task 1** and **Task 2** of the AltS
 
 ### Outputs  
 
-- **S3 Static Site URL:** [Insert your S3 bucket website URL here]  
-- **CloudFront URL:** [Insert your CloudFront distribution URL here]  
+- **S3 Static Site URL:** [S3 Static site Url]: (http://cloudlaunch-site-bucket-tnkma.s3-website.eu-north-1.amazonaws.com/)  
+- **CloudFront URL:** [CloudFront URL:](https://d1q7xwlbxx7ttz.cloudfront.net/)  
 - **IAM Policy JSON:** See [policy.json](./policy.json)  
 
 ---
@@ -62,31 +62,3 @@ This repository contains the solutions for **Task 1** and **Task 2** of the AltS
 - Verified that only the app subnet can communicate with the database subnet.  
 
 ---
-
-## IAM Policy JSON
-
-Below is the **formatted JSON policy** attached to the IAM user:
-
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "s3:*"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "ec2:DescribeVpcs",
-        "ec2:DescribeSubnets",
-        "ec2:DescribeRouteTables",
-        "ec2:DescribeSecurityGroups"
-      ],
-      "Resource": "*"
-    }
-  ]
-}

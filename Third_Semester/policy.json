@@ -1,0 +1,48 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "ListAllBuckets",
+			"Effect": "Allow",
+			"Action": "s3:ListBucket",
+			"Resource": [
+				"arn:aws:s3:::cloudlaunch-site-bucket-tnkma",
+				"arn:aws:s3:::cloudlaunch-private-bucket-tnkma",
+				"arn:aws:s3:::cloudlaunch-visible-only-bucket-tnkma"
+			]
+		},
+		{
+			"Sid": "SiteBucketReadOnly",
+			"Effect": "Allow",
+			"Action": [
+				"s3:GetObject"
+			],
+			"Resource": "arn:aws:s3:::cloudlaunch-site-bucket-tnkma/*"
+		},
+		{
+			"Sid": "PrivateBucketReadWrite",
+			"Effect": "Allow",
+			"Action": [
+				"s3:GetObject",
+				"s3:PutObject"
+			],
+			"Resource": "arn:aws:s3:::cloudlaunch-private-bucket-tnkma/*"
+		},
+		{
+			"Sid": "NoDeleteAnywher",
+			"Effect": "Deny",
+			"Action": "s3:DeleteObject",
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"ec2:DescribeVpcs",
+				"ec2:DescribeSubnets",
+				"ec2:DescribeRouteTables",
+				"ec2:DescribeSecurityGroups"
+			],
+			"Resource": "*"
+		}
+	]
+}
